@@ -88,6 +88,12 @@
 </head>
 <body style="font-size: 3em;">
 	Ingrese el número: <br />
-	<input type="text" name="numero" id="numero" style="font-size: 3rem; text-align: right; border: solid;" onKeyUp="darFormato();">
+	<!-- 
+		La combinación de los atributos type, pattern 
+		y novalidate permite desplegar el teclado nu-
+		mérico en dispositivos móviles y aceptar los 
+		separadores.
+	 -->
+	<input type="tel" pattern="[0-9]*" novalidate id="numero" style="font-size: 3rem; text-align: right; border: solid;" onKeyUp="darFormato();">
 <body>
 </html>
