@@ -25,7 +25,7 @@
 		//
 		// NOTA: Esta función puede ser usada libremente por cualquier persona.
 		*/
-		function formatearValor(valor, longMaxima) {
+		function separarMiles(valor, longMaxima) {
 
 			var longValor = valor.length;
 			
@@ -72,14 +72,14 @@
 		
 		// Esta función toma el número del campo de entrada en el formulario
 		// y lo remplaza por el número con separadores utilizando la función
-		// formatearValor()
+		// separarMiles()
 		function darFormato() {
 			// Se toma el número desde el formulario
 			var numSinFormato = document.getElementById("numero").value;
 			// Se valida que el valor no sea nulo ni vacío
 			if (numSinFormato == null || numSinFormato == "") return;
 			// Se da formato al número
-			var numConFormato = formatearValor(numSinFormato, 15);
+			var numConFormato = separarMiles(numSinFormato, 15);
 			// Se regresa el número al formulario, ya con separadores
 			document.getElementById("numero").value = numConFormato;
 		}
